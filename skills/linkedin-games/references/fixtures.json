@@ -1,0 +1,546 @@
+{
+ "note": "Real boards captured from live play, in extract.js output shape. Feed straight into solvers.solve(). The zip-2026-09-10 fixture is the phantom-wall regression: marker {idx:3,side:left} is a corner-join artefact and must be dropped, otherwise no path exists.",
+ "fixtures": [
+  {
+   "name": "queens-2026-09-09",
+   "board": {
+    "ok": true,
+    "game": "queens",
+    "n": 8,
+    "regionCount": 8,
+    "regions": [
+     0,
+     1,
+     1,
+     2,
+     2,
+     2,
+     2,
+     2,
+     0,
+     2,
+     3,
+     3,
+     2,
+     2,
+     2,
+     4,
+     0,
+     2,
+     2,
+     2,
+     2,
+     2,
+     5,
+     4,
+     0,
+     2,
+     2,
+     2,
+     2,
+     2,
+     5,
+     4,
+     0,
+     2,
+     2,
+     2,
+     2,
+     2,
+     5,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     6,
+     6,
+     6,
+     6,
+     2,
+     2,
+     2,
+     2,
+     2,
+     7,
+     7,
+     7,
+     7,
+     2
+    ]
+   },
+   "expect": {
+    "solutionJson": "[1,3,7,0,6,4,2,5]",
+    "planSteps": 8
+   }
+  },
+  {
+   "name": "sudoku-2026-09-09",
+   "board": {
+    "ok": true,
+    "game": "sudoku",
+    "n": 6,
+    "values": [
+     0,
+     2,
+     0,
+     5,
+     0,
+     0,
+     5,
+     0,
+     0,
+     0,
+     6,
+     0,
+     0,
+     0,
+     5,
+     0,
+     0,
+     6,
+     3,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     2,
+     0,
+     0,
+     4,
+     0,
+     1,
+     0
+    ]
+   },
+   "expect": {
+    "solutionDigits": "426531531264145326362145613452254613",
+    "box": "2x3"
+   }
+  },
+  {
+   "name": "tango-2026-09-09",
+   "board": {
+    "ok": true,
+    "game": "tango",
+    "n": 6,
+    "values": [
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     0,
+     1,
+     0,
+     1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     1,
+     0,
+     0,
+     1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1,
+     -1
+    ],
+    "edges": [
+     {
+      "kind": "eq",
+      "a": 7,
+      "b": 8
+     },
+     {
+      "kind": "eq",
+      "a": 9,
+      "b": 10
+     },
+     {
+      "kind": "eq",
+      "a": 19,
+      "b": 20
+     },
+     {
+      "kind": "ne",
+      "a": 21,
+      "b": 22
+     }
+    ]
+   },
+   "expect": {
+    "solutionDigits": "010110011001101010100101010011101100"
+   }
+  },
+  {
+   "name": "zip-2026-09-09",
+   "board": {
+    "ok": true,
+    "game": "zip",
+    "n": 6,
+    "nums": {
+     "3": 7,
+     "8": 8,
+     "9": 1,
+     "16": 2,
+     "19": 5,
+     "26": 4,
+     "27": 6,
+     "32": 3
+    },
+    "wallMarkers": [
+     {
+      "idx": 6,
+      "side": "right"
+     },
+     {
+      "idx": 7,
+      "side": "left"
+     },
+     {
+      "idx": 10,
+      "side": "right"
+     },
+     {
+      "idx": 11,
+      "side": "left"
+     },
+     {
+      "idx": 12,
+      "side": "right"
+     },
+     {
+      "idx": 13,
+      "side": "left"
+     },
+     {
+      "idx": 13,
+      "side": "bottom"
+     },
+     {
+      "idx": 13,
+      "side": "left"
+     },
+     {
+      "idx": 14,
+      "side": "bottom"
+     },
+     {
+      "idx": 15,
+      "side": "bottom"
+     },
+     {
+      "idx": 16,
+      "side": "right"
+     },
+     {
+      "idx": 16,
+      "side": "right"
+     },
+     {
+      "idx": 16,
+      "side": "bottom"
+     },
+     {
+      "idx": 17,
+      "side": "left"
+     },
+     {
+      "idx": 18,
+      "side": "right"
+     },
+     {
+      "idx": 19,
+      "side": "left"
+     },
+     {
+      "idx": 22,
+      "side": "right"
+     },
+     {
+      "idx": 23,
+      "side": "left"
+     },
+     {
+      "idx": 24,
+      "side": "right"
+     },
+     {
+      "idx": 25,
+      "side": "left"
+     },
+     {
+      "idx": 28,
+      "side": "right"
+     },
+     {
+      "idx": 29,
+      "side": "left"
+     }
+    ]
+   },
+   "expect": {
+    "pathLength": 36,
+    "wallMode": "paired",
+    "waypointOrder": "1,2,3,4,5,6,7,8"
+   }
+  },
+  {
+   "name": "zip-2026-09-10",
+   "board": {
+    "ok": true,
+    "game": "zip",
+    "n": 6,
+    "nums": {
+     "1": 1,
+     "7": 8,
+     "12": 2,
+     "13": 5,
+     "22": 6,
+     "23": 7,
+     "28": 4,
+     "34": 3
+    },
+    "wallMarkers": [
+     {
+      "idx": 3,
+      "side": "left"
+     },
+     {
+      "idx": 3,
+      "side": "bottom"
+     },
+     {
+      "idx": 4,
+      "side": "bottom"
+     },
+     {
+      "idx": 8,
+      "side": "right"
+     },
+     {
+      "idx": 9,
+      "side": "left"
+     },
+     {
+      "idx": 25,
+      "side": "bottom"
+     },
+     {
+      "idx": 26,
+      "side": "right"
+     },
+     {
+      "idx": 26,
+      "side": "right"
+     },
+     {
+      "idx": 26,
+      "side": "bottom"
+     },
+     {
+      "idx": 27,
+      "side": "left"
+     }
+    ]
+   },
+   "expect": {
+    "pathLength": 36,
+    "wallMode": "paired",
+    "waypointOrder": "1,2,3,4,5,6,7,8"
+   }
+  },
+  {
+   "name": "patches-2026-09-09-all-numbered",
+   "board": {
+    "ok": true,
+    "game": "patches",
+    "n": 7,
+    "seeds": [
+     {
+      "idx": 8,
+      "area": 6,
+      "shape": "any"
+     },
+     {
+      "idx": 10,
+      "area": 12,
+      "shape": "any"
+     },
+     {
+      "idx": 16,
+      "area": 5,
+      "shape": "tall"
+     },
+     {
+      "idx": 22,
+      "area": 10,
+      "shape": "any"
+     },
+     {
+      "idx": 26,
+      "area": 4,
+      "shape": "any"
+     },
+     {
+      "idx": 32,
+      "area": 4,
+      "shape": "tall"
+     },
+     {
+      "idx": 38,
+      "area": 4,
+      "shape": "any"
+     },
+     {
+      "idx": 40,
+      "area": 4,
+      "shape": "any"
+     }
+    ]
+   },
+   "expect": {
+    "regions": 8,
+    "solutionJson": "[8,8,8,10,10,10,10,8,8,8,10,10,10,10,22,22,16,10,10,10,10,22,22,16,38,32,26,26,22,22,16,38,32,26,26,22,22,16,38,32,40,40,22,22,16,38,32,40,40]"
+   }
+  },
+  {
+   "name": "patches-2026-09-10-free-shapes",
+   "board": {
+    "ok": true,
+    "game": "patches",
+    "n": 6,
+    "seeds": [
+     {
+      "idx": 0,
+      "area": 4,
+      "shape": "any"
+     },
+     {
+      "idx": 5,
+      "area": 6,
+      "shape": "any"
+     },
+     {
+      "idx": 15,
+      "area": 0,
+      "shape": "any"
+     },
+     {
+      "idx": 20,
+      "area": 0,
+      "shape": "any"
+     },
+     {
+      "idx": 30,
+      "area": 10,
+      "shape": "any"
+     },
+     {
+      "idx": 35,
+      "area": 8,
+      "shape": "any"
+     }
+    ]
+   },
+   "expect": {
+    "regions": 6,
+    "fullCover": true
+   }
+  },
+  {
+   "name": "patches-2026-09-12-mixed",
+   "board": {
+    "ok": true,
+    "game": "patches",
+    "n": 7,
+    "seeds": [
+     {
+      "idx": 0,
+      "area": 3,
+      "shape": "any"
+     },
+     {
+      "idx": 4,
+      "area": 4,
+      "shape": "wide"
+     },
+     {
+      "idx": 9,
+      "area": 9,
+      "shape": "any"
+     },
+     {
+      "idx": 13,
+      "area": 6,
+      "shape": "tall"
+     },
+     {
+      "idx": 22,
+      "area": 3,
+      "shape": "any"
+     },
+     {
+      "idx": 26,
+      "area": 2,
+      "shape": "any"
+     },
+     {
+      "idx": 35,
+      "area": 3,
+      "shape": "tall"
+     },
+     {
+      "idx": 39,
+      "area": 12,
+      "shape": "any"
+     },
+     {
+      "idx": 44,
+      "area": 3,
+      "shape": "wide"
+     },
+     {
+      "idx": 48,
+      "area": 4,
+      "shape": "any"
+     }
+    ]
+   },
+   "expect": {
+    "regions": 10,
+    "fullCover": true,
+    "solutionJson": "[0,4,4,4,4,13,13,0,22,9,9,9,13,13,0,22,9,9,9,13,13,35,22,9,9,9,26,26,35,39,39,39,39,39,39,35,39,39,39,39,39,39,44,44,44,48,48,48,48]"
+   }
+  }
+ ]
+}
