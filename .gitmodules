@@ -1,0 +1,3 @@
+[submodule "skills/stop-bullshit"]
+	path = skills/stop-bullshit
+	url = https://github.com/preference-kim/stop-bullshit

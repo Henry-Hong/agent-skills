@@ -13,6 +13,15 @@ npx skills add Henry-Hong/agent-skills --skill competitor-app-research
 npx skills add Henry-Hong/agent-skills --skill linkedin-games
 ```
 
+`stop-bullshit`은 서브모듈이라 tarball 기반 설치(`npx skills add` 포함)로는 빈 폴더로 받아집니다.
+받으려면 클론하세요.
+
+```bash
+git clone --recursive https://github.com/Henry-Hong/agent-skills.git
+# 이미 클론했다면
+git submodule update --init --recursive
+```
+
 ## Skills
 
 ### competitor-app-research
@@ -36,6 +45,23 @@ LinkedIn 데일리 게임(Queens, Mini Sudoku, Tango, Zip, Patches)을 DOM에서
 
 Requirements: JS 실행과 포인터 입력이 가능한 브라우저 자동화 환경(Playwright/Puppeteer/CDP) + 로그인된 LinkedIn 세션
 
+### stop-bullshit (submodule)
+
+[preference-kim/stop-bullshit](https://github.com/preference-kim/stop-bullshit) 을 서브모듈로
+참조합니다. 에이전트가 근거 없는 주장을 하거나, 검증한 척하거나, 꾸며낸 확신을 보일 때
+스스로 감사하고 수정하게 하는 스킬입니다. 업스트림에 라이선스가 명시돼 있지 않아
+복사 대신 서브모듈로 둡니다.
+
+## Using these with Aside
+
+Aside는 `~/.aside/u/<account>/skills/user/` 아래만 인덱싱하지만 심링크는 따라갑니다.
+레포를 단일 소스로 두고 심링크만 걸면 새 세션부터 인식됩니다.
+
+```bash
+ln -s ~/devheerim/agent-skills/skills/<name> ~/.aside/u/1/skills/user/<name>
+```
+
 ## License
 
-MIT
+MIT for the skills in this repository. `skills/stop-bullshit` is a submodule and keeps its
+own upstream terms.
